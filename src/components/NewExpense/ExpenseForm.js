@@ -18,7 +18,7 @@ const ExpenseForm = ({ onAddExpense, onCancel }) => {
   }
   const submitHandler = (event) => {
     event.preventDefault()
-    const expenseData = { title, amount, date: new Date(date) }
+    const expenseData = { title, amount: +amount, date: new Date(date) }
     onAddExpense(expenseData)
     setTitle('')
     setAmount('')
